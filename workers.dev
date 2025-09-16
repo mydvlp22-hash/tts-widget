@@ -8,7 +8,7 @@ async function handleRequest(request) {
   }
 
   const { text, voiceId } = await request.json();
-  const apiKey = 'YOUR_ELEVENLABS_KEY'; // hidden key
+  const apiKey = 'sk_d00c98db96d85e4251abba37045d1d31e30b376e55a1fab9'; // hidden key
 
   const resp = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
     method: 'POST',
@@ -28,3 +28,4 @@ async function handleRequest(request) {
     headers: { 'Content-Type': 'audio/mpeg', 'Access-Control-Allow-Origin':'*' }
   });
 }
+
